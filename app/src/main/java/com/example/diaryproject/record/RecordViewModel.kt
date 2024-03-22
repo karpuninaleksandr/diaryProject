@@ -50,8 +50,8 @@ class RecordViewModel(
                 record.tags = tags.toString()
                 record.lastChangeTimeMillis = System.currentTimeMillis()
                 dao.update(record)
-                _navigateToDiaryView.value = true
             }
+            if (recordValue.isNotBlank()) _navigateToDiaryView.value = true
         }
     }
 
@@ -66,7 +66,7 @@ class RecordViewModel(
         uiScope.launch {
             val tag = tagsList[position]
             if (tags?.contains(tag.tagName) == false) {
-                tags = tags.plus(tag.tagName).plus(",")
+                tags = tags.plus("#").plus(tag.tagName)
             }
             _updateTagsList.value = tags
         }
@@ -76,7 +76,7 @@ class RecordViewModel(
         uiScope.launch {
             val tag = tagsList[position]
             if (tags?.contains(tag.tagName) == true) {
-                tags = tags!!.replace(tag.tagName.plus(","), "")
+                tags = tags!!.replace("#".plus(tag.tagName), "")
             }
             _updateTagsList.value = tags
         }

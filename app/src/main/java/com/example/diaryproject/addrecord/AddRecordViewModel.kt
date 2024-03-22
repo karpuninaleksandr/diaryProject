@@ -62,7 +62,7 @@ class AddRecordViewModel(
         uiScope.launch {
             val tag = dao.getTagById(tagsList[position].tagId)
             if (tag != null && !tags.contains(tag.tagName)) {
-                tags = tags.plus(tag.tagName).plus(",")
+                tags = tags.plus("#").plus(tag.tagName)
                 _updateTagsList.value = tags
             }
         }

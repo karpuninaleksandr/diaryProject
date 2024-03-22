@@ -42,7 +42,7 @@ class TagFragmentViewModel(
             val tag  = dao.getTagById(tagId)
             val records = dao.getFilteredRecords("%".plus(tag?.tagName).plus("%"))
             for (record in records) {
-                record.tags = record.tags.replace(tag?.tagName.plus(","), "")
+                record.tags = record.tags.replace("#".plus(tag?.tagName), "")
                 dao.update(record)
             }
             dao.deleteTag(tagId)
