@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">diaryProject</string>
+    <string name="fragment_diary_view">Diary records</string>
+    <string name="fragment_add_record">Add record</string>
+    <string name="fragment_add_tag">Add tag</string>
+    <string name="fragment_tag_list_view">Tags</string>
+    <string name="add_record">Add record</string>
+    <string name="add_tag">Add tag</string>
+    <string name="add_tag_to_record">Add tag</string>
+    <string name="delete_record">Delete</string>
+    <string name="delete_tag">Delete</string>
+    <string name="edit_record">Edit</string>
+    <string name="edit_tag">Edit</string>
+    <string name="go_to_tags">Go to tags</string>
+    <string name="go_to_diary">Go to diary</string>
+    <string name="back_to_diary">Back to diary</string>
+    <string name="back_to_tags">Back to diary</string>
+    <string name="confirm">Confirm</string>
+    <string name="deny">Deny</string>
+    <string name="record">Record</string>
+    <string name="tag">Tag</string>
+    <string name="tags">Tags:</string>
+    <string name="filtration">Filtration:</string>
+    <string name="enter_tag_name">Enter tag name</string>
+    <string name="enter_record_value">Enter record</string>
+</resources>

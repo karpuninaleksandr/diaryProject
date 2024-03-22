@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Личный дневник</string>
+    <string name="fragment_diary_view">Запиис в дневнике</string>
+    <string name="fragment_add_record">Добавление записи</string>
+    <string name="fragment_add_tag">Добавление тэга</string>
+    <string name="fragment_tag_list_view">Тэги</string>
+    <string name="add_record">Добавить запись</string>
+    <string name="add_tag">Добавить тэг</string>
+    <string name="add_tag_to_record">Добавить тэг</string>
+    <string name="delete_record">Удалить</string>
+    <string name="delete_tag">Удалить</string>
+    <string name="edit_record">Редактировать</string>
+    <string name="edit_tag">Редактировать</string>
+    <string name="go_to_tags">Перейти к тэгам</string>
+    <string name="go_to_diary">Перейти к записям</string>
+    <string name="back_to_diary">Назад к записям</string>
+    <string name="back_to_tags">Назад к тэгам</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="deny">Отменить</string>
+    <string name="record">Запись</string>
+    <string name="tag">Тэг</string>
+    <string name="tags">Тэги:</string>
+    <string name="filtration">Фильтрация:</string>
+    <string name="enter_tag_name">Введите имя тэга</string>
+    <string name="enter_record_value">Введите запись</string>
+</resources>
