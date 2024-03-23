@@ -9,63 +9,71 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/very_light_green">
+
 
         <Button
             android:id="@+id/add_record"
             style="@style/Buttons"
-            android:layout_width="149dp"
-            android:layout_height="51dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
             android:text="@string/add_record"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <Button
             android:id="@+id/go_to_tags"
             style="@style/Buttons"
-            android:layout_width="149dp"
-            android:layout_height="51dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="84dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
             android:text="@string/go_to_tags"
+            app:layout_constraintEnd_toEndOf="@+id/add_record"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/add_record"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/filtration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="76dp"
+            android:layout_marginEnd="144dp"
             android:text="@string/filtration"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/add_record"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/add_record" />
 
         <Spinner
             android:id="@+id/tags_spinner"
-            android:layout_width="118dp"
-            android:layout_height="34dp"
-            android:layout_marginLeft="248dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:popupBackground="@color/very_light_green"
+            android:popupElevation="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/filtration"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filtration" />
+            app:layout_constraintStart_toEndOf="@+id/filtration"
+            app:layout_constraintTop_toTopOf="@+id/filtration"
+            app:layout_constraintVertical_bias="0.0" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/records_list"
-            android:layout_width="420dp"
-            android:layout_height="581dp"
+            android:layout_width="385dp"
+            android:layout_height="562dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/go_to_tags"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintEnd_toEndOf="@+id/tags_spinner"
+            app:layout_constraintHorizontal_bias="0.575"
+            app:layout_constraintStart_toStartOf="@+id/add_record"
+            app:layout_constraintTop_toBottomOf="@+id/go_to_tags" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

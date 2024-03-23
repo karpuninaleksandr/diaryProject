@@ -22,5 +22,9 @@
     <string name="tags">Тэги:</string>
     <string name="filtration">Фильтрация:</string>
     <string name="enter_tag_name">Введите имя тэга</string>
+    <string name="record_value_text">Запись:</string>
+    <string name="record_last_change_time_text">Последнее изменение:</string>
+    <string name="tags_text">Тэги:</string>
+    <string name="tag_name_text">Наименование тэга:</string>
     <string name="enter_record_value">Введите запись</string>
 </resources>

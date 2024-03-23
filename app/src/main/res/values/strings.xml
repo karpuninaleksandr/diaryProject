@@ -22,5 +22,9 @@
     <string name="tags">Tags:</string>
     <string name="filtration">Filtration:</string>
     <string name="enter_tag_name">Enter tag name</string>
+    <string name="record_value_text">Record:</string>
+    <string name="record_last_change_time_text">Last change:</string>
+    <string name="tags_text">Tags:</string>
+    <string name="tag_name_text">Tag name:</string>
     <string name="enter_record_value">Enter record</string>
 </resources>

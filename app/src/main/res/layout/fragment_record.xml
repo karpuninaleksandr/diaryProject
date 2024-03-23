@@ -3,105 +3,148 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/very_light_green">
 
         <EditText
             android:id="@+id/record_value"
             android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="16dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toEndOf="@+id/record_value_text"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="value" />
 
         <TextView
             android:id="@+id/record_tags"
-            android:layout_width="250dp"
-            android:layout_height="15dp"
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/record_last_change_time"
             app:layout_constraintTop_toBottomOf="@+id/record_value"
             tools:text="tags" />
 
         <TextView
-            android:id="@+id/record_last_change_time"
-            android:layout_width="250dp"
-            android:layout_height="15dp"
-
-            android:layout_marginTop="20dp"
+            android:id="@+id/record_last_change_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_last_change_time_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/record_last_change_time"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.072"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/record_last_change_time" />
+
+        <TextView
+            android:id="@+id/record_value_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_value_text"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/record_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/record_value" />
+
+        <TextView
+            android:id="@+id/tags_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tags_text"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/record_tags"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.063"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/record_tags" />
+
+        <TextView
+            android:id="@+id/record_last_change_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.278"
+            app:layout_constraintStart_toEndOf="@+id/record_last_change_time_text"
             app:layout_constraintTop_toBottomOf="@+id/record_value"
             tools:text="time" />
 
         <Button
             android:id="@+id/go_to_diary"
             style="@style/Buttons"
-            android:layout_width="149dp"
-            android:layout_height="51dp"
-            android:layout_marginStart="44dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="260dp"
             android:text="@string/back_to_diary"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tags_spinner"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/delete_record"
             style="@style/Buttons"
-            android:layout_width="149dp"
-            android:layout_height="51dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="260dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
             android:text="@string/delete_record"
+            app:layout_constraintBottom_toBottomOf="@+id/go_to_diary"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toEndOf="@+id/go_to_diary"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/go_to_diary"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/delete_tag"
             style="@style/Buttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:layout_marginEnd="44dp"
+            android:layout_marginStart="32dp"
             android:text="@string/delete_tag"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/add_tag"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/add_tag"
+            app:layout_constraintTop_toTopOf="@+id/add_tag"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/add_tag"
             style="@style/Buttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="152dp"
-            android:layout_marginTop="140dp"
+            android:layout_marginStart="16dp"
             android:text="@string/add_tag"
+            app:layout_constraintBottom_toBottomOf="@+id/tags_spinner"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/tags_spinner"
+            app:layout_constraintTop_toTopOf="@+id/tags_spinner" />
 
         <Spinner
             android:id="@+id/tags_spinner"
             android:layout_width="118dp"
             android:layout_height="34dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="150dp"
+            android:popupBackground="@color/very_light_green"
+            android:popupElevation="10dp"
+            android:textColor="@color/green"
+            android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tags_text"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
