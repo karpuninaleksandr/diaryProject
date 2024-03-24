@@ -71,7 +71,7 @@
             android:layout_height="562dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="@+id/tags_spinner"
-            app:layout_constraintHorizontal_bias="0.575"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/add_record"
             app:layout_constraintTop_toBottomOf="@+id/go_to_tags" />
 

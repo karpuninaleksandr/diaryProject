@@ -7,7 +7,7 @@ class Utils {
     companion object {
         @SuppressLint("SimpleDateFormat")
         fun convertLongToDateString(systemTime: Long): String {
-            return SimpleDateFormat("EEEE MMM-dd-yyyy' Time: 'HH:mm")
+            return SimpleDateFormat("dd-MMM-yyyy' 'HH:mm")
                 .format(systemTime).toString()
         }
     }
